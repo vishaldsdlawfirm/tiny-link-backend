@@ -20,11 +20,10 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-// Health Check
 app.get("/healthz", (req, res) => {
   res.status(200).json({
     ok: true,
-    version: "1.0"
+    version: "1.0",
   });
 });
 
